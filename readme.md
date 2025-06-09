@@ -37,16 +37,17 @@
 
 ```
 oop final project/
-├── assets/
+├── assets/ # 圖片與素材
 │   ├── cat/         # 主角貓動畫
 │   ├── boss/        # BOSS 動畫
 │   ├── bg/          # 地圖背景
 │   └── ui/          # UI 元素
-├── game.py          # 遊戲主邏輯
-├── main.py          # 啟動入口
-├── mission.py       # 任務機制
-├── boss.py          # BOSS 物件
-├── message.py       # 訊息框管理器
+├── main.py # 遊戲主程式入口
+├── game.py # 遊戲邏輯與場景控制
+├── cat.py # 玩家角色類別
+├── boss.py # Boss 類別
+├── mission.py # 任務觸發
+├── message.py # 訊息框管理
 └── README.md        # 本說明文件
 ```
 
