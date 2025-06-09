@@ -37,16 +37,17 @@
 
 oop final project/
 ├── assets/
-│ ├── cat/ # 主角貓素材
-│ ├── boss/ # BOSS 動畫圖片
-│ ├── bg/ # 地圖
-│ └── ui/ # UI 元素、背景
-├── game.py # 遊戲主邏輯
-├── main.py # 啟動入口
-├── message.py # 訊息框管理器
-├── mission.py # 任務機制
-├── boss.py # BossCat 類別
-└── README.md # 本說明文件
+│   ├── cat/         # 主角貓動畫
+│   ├── boss/        # BOSS 動畫
+│   ├── bg/          # 地圖背景
+│   └── ui/          # UI 元素
+├── game.py          # 遊戲主邏輯
+├── main.py          # 啟動入口
+├── mission.py       # 任務機制
+├── boss.py          # BOSS 物件
+├── message.py       # 訊息框管理器
+└── README.md        # 本說明文件
+
 
 
 ## 🔧 環境需求
@@ -54,12 +55,10 @@ oop final project/
 - Python 3.8+
 - pygame
 
-安裝方式：
+如何執行：
 
 ```bash
 pip install pygame
-
-啟動遊戲主程式：
 ```bash
 python main.py
 
