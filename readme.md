@@ -35,6 +35,7 @@
 
 ## 📁 專案結構
 
+```
 oop final project/
 ├── assets/
 │   ├── cat/         # 主角貓動畫
@@ -47,8 +48,7 @@ oop final project/
 ├── boss.py          # BOSS 物件
 ├── message.py       # 訊息框管理器
 └── README.md        # 本說明文件
-
-
+```
 
 ## 🔧 環境需求
 
@@ -59,6 +59,5 @@ oop final project/
 
 ```bash
 pip install pygame
-```bash
 python main.py
 
