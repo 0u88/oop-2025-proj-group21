@@ -113,7 +113,7 @@ class Game:
     def draw_health_bar(self,screen, x, y, hp, max_hp, color):
         bar_width = 100
         bar_height = 10
-        fill = int((hp / max_hp) * bar_width)
+        fill = int((hp / max_hp) * bar_width) if max_hp > 0 else 0
         outline_rect = pygame.Rect(x, y, bar_width, bar_height)
         fill_rect = pygame.Rect(x, y, fill, bar_height)
         pygame.draw.rect(screen, color, fill_rect)
@@ -146,8 +146,11 @@ class Game:
         self.cat.cute = 0
         self.cat.has_box = False
         self.cat.max_hp = 5
-        self.cat.__dict__.pop("petting_done", None)  # 清除任務 flag（這些任務要自己補上 reset 清除）
-        self.cat.__dict__.pop("rain_checked", None)
+        # 清除所有任務 flag，讓任務重玩時可以再觸發
+        for flag in ("petting_done", "food_done", "rain_checked",
+                     "box_fail_checked", "scratch_done", "granny_done"):
+            self.cat.__dict__.pop(flag, None)
+        self.boss.hp = self.boss.max_hp
         
         for mission in self.missions:
             mission.triggered = False
